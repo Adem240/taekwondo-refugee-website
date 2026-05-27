@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--
+  <!DOCTYPE html> sagt dem Browser: "Das ist ein HTML5-Dokument."
+  Das muss IMMER ganz oben stehen.
+-->
+
+<html lang="de">
+<!--
+  <html> ist das Wurzelelement – es umschliesst die ganze Seite.
+  lang="de" teilt dem Browser (und Screenreadern) mit, dass die Seite auf Deutsch ist.
+-->
+
+<head>
+  <!--
+    <head> enthält unsichtbare Informationen über die Seite:
+    - Titel (erscheint im Browser-Tab)
+    - Zeichensatz (damit Umlaute wie ä, ö, ü korrekt angezeigt werden)
+    - Viewport (damit die Seite auf Mobilgeräten richtig skaliert)
+    - Link zum CSS (Gestaltung)
+  -->
+
+  <meta charset="UTF-8">
+  <!-- UTF-8 = Zeichensatz, der alle Sprachen und Sonderzeichen (ä, ö, ü, é...) unterstützt -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    viewport = Anzeigebereich auf dem Gerät.
+    width=device-width → Breite = Bildschirmbreite des Geräts
+    initial-scale=1.0  → Keine Vergrösserung beim Laden (wichtig für Mobile!)
+  -->
+
+  <title>UHP Taekwondo – United High Performance Team</title>
+  <!-- Erscheint im Browser-Tab und bei Google-Suchergebnissen -->
+
+  <link rel="stylesheet" href="style.css">
+  <!--
+    Verknüpft unser CSS-Stylesheet.
+    rel="stylesheet" = Art der Verknüpfung
+    href="style.css"  = Dateipfad (die CSS-Datei muss im selben Ordner liegen)
+  -->
+
+</head>
+
+<body>
+  <!--
+    <body> enthält ALLES, was der Benutzer sieht und liest.
+    Alles ab hier wird im Browser angezeigt.
+  -->
+
+
+  <!-- ============================================================
+       NAVIGATION (oben auf der Seite)
+       ============================================================ -->
+  <header>
+    <!--
+      <header> = Kopfbereich der Seite.
+      Enthält typischerweise Logo, Navigation und ggf. Sprachauswahl.
+    -->
+
+    <nav>
+      <!--
+        <nav> = Navigationsbereich.
+        Enthält Links zu den verschiedenen Bereichen der Seite.
+        Wichtig für Barrierefreiheit (Screenreader erkennen es als Navigation).
+      -->
+
+      <a href="index.html">
+        <img src="images/logo.png" alt="UHP Taekwondo Logo">
+        <!--
+          <a href="..."> = Hyperlink (Verlinkung)
+          <img> = Bild. WICHTIG: alt="..." beschreibt das Bild für
+          sehbehinderte Menschen und wird angezeigt, falls das Bild nicht lädt.
+          <img> ist ein selbstschliessendes Element – kein </img> nötig!
+        -->
+      </a>
+
+      <div class="nav-sprache">
+        <!-- <div> = allgemeiner Container ohne eigene Bedeutung, zum Gruppieren -->
+        <a href="#">Deutsch</a>
+        <a href="#">English</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       HERO-BEREICH (grosses Bild ganz oben, "Erster Eindruck")
+       ============================================================ -->
+  <section class="hero">
+    <!--
+      <section> = ein thematischer Abschnitt der Seite.
+      Jede Section sollte ein klares Thema haben.
+      class="hero" = CSS-Klasse, damit wir diesen Bereich im CSS gezielt gestalten können.
+    -->
+
+    <img src="images/hero-bild.jpg" alt="UHP Team beim Training">
+
+    <div class="hero-text">
+      <p>PERFORMANCE TEAM</p>
+      <h1>United High<br>Performance Team</h1>
+      <!--
+        <h1> = Hauptüberschrift (Heading 1). Nur EINMAL pro Seite verwenden!
+        <br> = Zeilenumbruch innerhalb eines Textes (selbstschliessend)
+        h1 bis h6 = Hierarchie der Überschriften (h1 = wichtigste)
+      -->
+      <p>Wettkampf. K.O. Poomsae. Zuschauer.<br>Das UHP Team.</p>
+
+      <a href="#team" class="button-rot">Team vorgestellt</a>
+      <!--
+        Ein Link, der wie ein Button aussieht.
+        href="#team" = springt zum Element mit id="team" auf derselben Seite (Anker-Link).
+        class="button-rot" = CSS-Klasse für die rote Buttongestaltung
+      -->
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       EINLEITUNG / BESCHREIBUNG
+       ============================================================ -->
+  <section class="einleitung">
+
+    <h2>Starke Athlet:innen.<br>Bewährte Struktur.</h2>
+    <!--
+      <h2> = Überschrift zweiter Ordnung (unter h1)
+      Wichtig: Überschriften immer in richtiger Reihenfolge verwenden (h1, h2, h3...)
+    -->
+
+    <p>
+      Das UHP Taekwondo-Kader umfasst internationale und nationale Spitzenathleten. 
+      Wir bieten Struktur, Begleitung und professionelle Unterrichtsstruktur.
+    </p>
+    <!--
+      <p> = Paragraph / Absatz. Für normalen Fliesstext.
+    -->
+
+  </section>
+
+
+  <!-- ============================================================
+       TEAM-SEKTION
+       ============================================================ -->
+  <section class="team" id="team">
+    <!--
+      id="team" = eindeutiger Bezeichner für dieses Element.
+      IDs dürfen auf einer Seite NUR EINMAL vorkommen!
+      Wird hier als Sprungziel für den Anker-Link oben verwendet.
+    -->
+
+    <h2>Ein Team.<br>Ohne Wenn und Aber.</h2>
+
+    <p>
+      Das UHP Taekwondo-Team bietet angehenden Athleten für Informatiker 
+      und professionelle Athleten, die auf langfristige Leistungsentwicklung 
+      setzen, eine einzigartige Umgebung.
+    </p>
+
+    <h3>Das UHP Team entsteht</h3>
+    <!--
+      <h3> = Unterüberschrift (dritte Ebene)
+    -->
+
+    <ul>
+      <!--
+        <ul> = ungeordnete Liste (Aufzählungspunkte, "Bullets")
+        Jeder Listenpunkt = <li> (list item)
+        Alternative: <ol> = geordnete Liste (nummeriert: 1, 2, 3...)
+      -->
+      <li>Gezielte Förderung nationaler Athleten</li>
+      <li>Professionelle Trainingsstruktur</li>
+      <li>Selektion und Weiterentwicklung</li>
+    </ul>
+
+  </section>
+
+
+  <!-- ============================================================
+       VERANTWORTUNG / WERTE
+       ============================================================ -->
+  <section class="verantwortung">
+
+    <h2>Leistung und Verantwortung.<br>Bewährte Struktur.</h2>
+
+    <p>
+      Das UHP Taekwondo-Kader orientiert sich an klaren Werten und übernimmt 
+      Verantwortung für die Athleten. Wir arbeiten täglich am Erfolg.
+    </p>
+
+    <div class="grundsaetze">
+      <!--
+        <div> als Container für die drei Grundsätze.
+        Später im CSS können wir diese z.B. nebeneinander anordnen (Flexbox/Grid).
+      -->
+
+      <div class="grundsatz">
+        <h3>Grundsatz 1</h3>
+        <p>Kurzbeschreibung des ersten Grundsatzes.</p>
+      </div>
+
+      <div class="grundsatz">
+        <h3>Grundsatz 2</h3>
+        <p>Kurzbeschreibung des zweiten Grundsatzes.</p>
+      </div>
+
+      <div class="grundsatz">
+        <h3>Grundsatz 3</h3>
+        <p>Kurzbeschreibung des dritten Grundsatzes.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       ROTER CTA-BEREICH (Call to Action = Handlungsaufforderung)
+       ============================================================ -->
+  <section class="cta-rot">
+    <!--
+      CTA = Call to Action. Ein Bereich, der den Benutzer zu einer
+      Aktion auffordert, z.B. "Jetzt anmelden" oder "Mehr erfahren".
+      Dieser Bereich hat laut Design einen roten Hintergrund.
+    -->
+
+    <h2>Sei der Unterschied.</h2>
+
+    <p>Werde Teil des UHP Teams – gestalte die Zukunft des Taekwondo in der Schweiz.</p>
+
+    <a href="#kontakt" class="button-weiss">Mehr erfahren</a>
+
+    <div class="social-media">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <!--
+          target="_blank" = öffnet den Link in einem neuen Browser-Tab
+          aria-label = Beschriftung für Screenreader (da kein sichtbarer Text)
+        -->
+        <img src="images/icon-instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="images/icon-facebook.svg" alt="Facebook">
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       ATHLETEN-BEREICH
+       ============================================================ -->
+  <section class="athleten" id="athleten">
+
+    <h2>Für Athlet:innen. Endlich ein fairer Rahmen.</h2>
+
+    <p>Das UHP Team bietet mit dem Athleten System eine faire und individuelle Unterstützung.</p>
+
+    <div class="athleten-vorteile">
+
+      <div class="vorteil">
+        <h3>Titel</h3>
+        <p>Beschreibung des ersten Vorteils.</p>
+      </div>
+
+      <div class="vorteil">
+        <h3>Titel</h3>
+        <p>Beschreibung des zweiten Vorteils.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SCHWEIZ-BEREICH
+       ============================================================ -->
+  <section class="schweiz">
+
+    <h2>Für die Schweiz: Stärker durch geteilte Erfahrung.</h2>
+
+    <p>Das UHP Team arbeitet mit allen grossen Schweizer Taekwondo-Verbänden zusammen.</p>
+
+  </section>
+
+
+  <!-- ============================================================
+       PARTNER & TRÄGER
+       ============================================================ -->
+  <section class="partner" id="partner">
+
+    <h2>Unsere Partner & Träger</h2>
+
+    <div class="partner-logos">
+      <!--
+        Hier kommen die Partner-Logos als <img>-Elemente rein.
+        Jedes Logo wird mit einem Link verknüpft.
+      -->
+      <a href="#" target="_blank">
+        <img src="images/partner-1.png" alt="Swiss Taekwondo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/partner-2.png" alt="Deutschschweizer Taekwondo Ekamdo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/partner-3.png" alt="Swiss Taekwondo">
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       KONTAKT / FOOTER
+       ============================================================ -->
+  <footer id="kontakt">
+    <!--
+      <footer> = Fussbereich der Seite.
+      Enthält typischerweise Kontaktinfos, Links, Copyright.
+      id="kontakt" als Sprungziel für Anker-Links.
+    -->
+
+    <div class="footer-inhalt">
+
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="UHP Taekwondo Logo">
+      </div>
+
+      <address>
+        <!--
+          <address> = Kontaktinformationen.
+          Semantisches HTML: Der Browser und Suchmaschinen "verstehen",
+          dass das eine Adresse/Kontaktinfo ist.
+        -->
+        <p>UHP Taekwondo</p>
+        <p>Musterstrasse 1, 3000 Bern</p>
+        <p>
+          <a href="mailto:info@uhp-taekwondo.ch">info@uhp-taekwondo.ch</a>
+          <!--
+            mailto: = öffnet das E-Mail-Programm des Benutzers
+          -->
+        </p>
+        <p>
+          <a href="tel:+41000000000">+41 00 000 00 00</a>
+          <!--
+            tel: = ermöglicht direktes Anrufen auf Mobilgeräten
+          -->
+        </p>
+      </address>
+
+      <nav class="footer-nav">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">Kontakt</a>
+      </nav>
+
+    </div>
+
+    <p class="copyright">
+      &copy; 2024 UHP Taekwondo – United High Performance Team
+      <!--
+        &copy; = HTML-Entität für das Copyright-Zeichen ©
+        HTML-Entitäten beginnen mit & und enden mit ;
+        Weitere Beispiele: &amp; (= &), &lt; (= <), &gt; (= >)
+      -->
+    </p>
+
+  </footer>
+
+
+</body>
+</html>
