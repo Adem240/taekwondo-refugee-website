@@ -1,0 +1,377 @@
+/* =====================================================
+   GRUNDEINSTELLUNGEN
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* =====================================================
+   HEADER / NAVIGATION
+===================================================== */
+
+header {
+    background: #fff;
+    padding: 15px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 70px;
+}
+
+.nav-sprache {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-sprache a {
+    color: #222;
+    font-weight: 600;
+}
+
+.nav-sprache a:hover {
+    color: #d90000;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 700px;
+}
+
+.hero-text p:first-child {
+    color: #ff3b3b;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-rot,
+.button-weiss {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button-rot {
+    background: #d90000;
+    color: white;
+}
+
+.button-rot:hover {
+    background: #b80000;
+}
+
+.button-weiss {
+    background: white;
+    color: #d90000;
+}
+
+.button-weiss:hover {
+    background: #f0f0f0;
+}
+
+/* =====================================================
+   EINLEITUNG
+===================================================== */
+
+.einleitung {
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.einleitung h2 {
+    font-size: 2.5rem;
+}
+
+/* =====================================================
+   TEAM
+===================================================== */
+
+.team {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+}
+
+.team ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.team li {
+    margin-bottom: 10px;
+}
+
+/* =====================================================
+   VERANTWORTUNG
+===================================================== */
+
+.verantwortung {
+    background: #f4f4f4;
+}
+
+.grundsaetze {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.grundsatz {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* =====================================================
+   CTA ROT
+===================================================== */
+
+.cta-rot {
+    text-align: center;
+    background: #d90000;
+    color: white;
+}
+
+.cta-rot h2 {
+    font-size: 3rem;
+}
+
+.social-media {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-media img {
+    width: 40px;
+}
+
+/* =====================================================
+   ATHLETEN
+===================================================== */
+
+.athleten {
+    text-align: center;
+}
+
+.athleten-vorteile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.vorteil {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* =====================================================
+   SCHWEIZ
+===================================================== */
+
+.schweiz {
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.schweiz h2 {
+    font-size: 2.5rem;
+}
+
+/* =====================================================
+   PARTNER
+===================================================== */
+
+.partner {
+    text-align: center;
+}
+
+.partner-logos {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    max-height: 100px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.partner-logos img:hover {
+    filter: grayscale(0%);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #111;
+    color: white;
+    padding: 60px 10% 30px;
+}
+
+.footer-inhalt {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copyright {
+    margin-top: 40px;
+    text-align: center;
+    color: #aaa;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .grundsaetze,
+    .athleten-vorteile {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inhalt {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-text {
+        left: 5%;
+        right: 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+}
