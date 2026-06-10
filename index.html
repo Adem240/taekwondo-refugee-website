@@ -1,301 +1,305 @@
 <!DOCTYPE html>
-<!--
-  <!DOCTYPE html> sagt dem Browser: "Das ist ein HTML5-Dokument."
-  Das muss IMMER ganz oben stehen.
--->
-
 <html lang="de">
-<!--
-  <html> ist das Wurzelelement – es umschliesst die ganze Seite.
-  lang="de" teilt dem Browser (und Screenreadern) mit, dass die Seite auf Deutsch ist.
--->
 
 <head>
-  <!--
-    <head> enthält unsichtbare Informationen über die Seite:
-    - Titel (erscheint im Browser-Tab)
-    - Zeichensatz (damit Umlaute wie ä, ö, ü korrekt angezeigt werden)
-    - Viewport (damit die Seite auf Mobilgeräten richtig skaliert)
-    - Link zum CSS (Gestaltung)
-  -->
-
   <meta charset="UTF-8">
-  <!-- UTF-8 = Zeichensatz, der alle Sprachen und Sonderzeichen (ä, ö, ü, é...) unterstützt -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--
-    viewport = Anzeigebereich auf dem Gerät.
-    width=device-width → Breite = Bildschirmbreite des Geräts
-    initial-scale=1.0  → Keine Vergrösserung beim Laden (wichtig für Mobile!)
-  -->
-
   <title>UHP Taekwondo – United High Performance Team</title>
-  <!-- Erscheint im Browser-Tab und bei Google-Suchergebnissen -->
-
   <link rel="stylesheet" href="styles.css">
-  <!--
-    Verknüpft unser CSS-Stylesheet.
-    rel="stylesheet" = Art der Verknüpfung
-    href="style.css"  = Dateipfad (die CSS-Datei muss im selben Ordner liegen)
-  -->
-
 </head>
 
 <body>
-  <!--
-    <body> enthält ALLES, was der Benutzer sieht und liest.
-    Alles ab hier wird im Browser angezeigt.
-  -->
-
 
   <!-- ============================================================
-       NAVIGATION (oben auf der Seite)
+       NAVIGATION
        ============================================================ -->
   <header>
-    <!--
-      <header> = Kopfbereich der Seite.
-      Enthält typischerweise Logo, Navigation und ggf. Sprachauswahl.
-    -->
-
     <nav>
-      <!--
-        <nav> = Navigationsbereich.
-        Enthält Links zu den verschiedenen Bereichen der Seite.
-        Wichtig für Barrierefreiheit (Screenreader erkennen es als Navigation).
-      -->
-
       <a href="index.html">
-        <img src="images/logo.png" alt="UHP Taekwondo Logo">
-        <!--
-          <a href="..."> = Hyperlink (Verlinkung)
-          <img> = Bild. WICHTIG: alt="..." beschreibt das Bild für
-          sehbehinderte Menschen und wird angezeigt, falls das Bild nicht lädt.
-          <img> ist ein selbstschliessendes Element – kein </img> nötig!
-        -->
+        <img src="img/Swiss Logo 2018 _UHP Team_TfA.svg" alt="UHP Taekwondo Logo">
       </a>
-
+      <div class="nav-links">
+        <a href="#team">Team</a>
+        <a href="#training">Training</a>
+        <a href="#athleten">Athleten</a>
+        <a href="#erfolge">Erfolge</a>
+        <a href="#partner">Partner</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
       <div class="nav-sprache">
-        <!-- <div> = allgemeiner Container ohne eigene Bedeutung, zum Gruppieren -->
         <a href="#">Deutsch</a>
         <a href="#">English</a>
       </div>
-
     </nav>
   </header>
 
-
   <!-- ============================================================
-       HERO-BEREICH (grosses Bild ganz oben, "Erster Eindruck")
+       HERO
        ============================================================ -->
   <section class="hero">
-    <!--
-      <section> = ein thematischer Abschnitt der Seite.
-      Jede Section sollte ein klares Thema haben.
-      class="hero" = CSS-Klasse, damit wir diesen Bereich im CSS gezielt gestalten können.
-    -->
-
-    <img src="images/hero-bild.jpg" alt="UHP Team beim Training">
-
+    <img src="img/Mahdi-2 (1).jpg" alt="UHP Team beim Training">
     <div class="hero-text">
       <p>PERFORMANCE TEAM</p>
       <h1>United High<br>Performance Team</h1>
-      <!--
-        <h1> = Hauptüberschrift (Heading 1). Nur EINMAL pro Seite verwenden!
-        <br> = Zeilenumbruch innerhalb eines Textes (selbstschliessend)
-        h1 bis h6 = Hierarchie der Überschriften (h1 = wichtigste)
-      -->
       <p>Wettkampf. K.O. Poomsae. Zuschauer.<br>Das UHP Team.</p>
-
-      <a href="#team" class="button-rot">Team vorgestellt</a>
-      <!--
-        Ein Link, der wie ein Button aussieht.
-        href="#team" = springt zum Element mit id="team" auf derselben Seite (Anker-Link).
-        class="button-rot" = CSS-Klasse für die rote Buttongestaltung
-      -->
+      <div class="hero-buttons">
+        <a href="#team" class="button-rot">Team vorgestellt</a>
+        <a href="#kontakt" class="button-weiss">Jetzt beitreten</a>
+      </div>
     </div>
-
   </section>
 
-
   <!-- ============================================================
-       EINLEITUNG / BESCHREIBUNG
+       EINLEITUNG
        ============================================================ -->
   <section class="einleitung">
-
     <h2>Starke Athlet:innen.<br>Bewährte Struktur.</h2>
-    <!--
-      <h2> = Überschrift zweiter Ordnung (unter h1)
-      Wichtig: Überschriften immer in richtiger Reihenfolge verwenden (h1, h2, h3...)
-    -->
-
     <p>
       Das UHP Taekwondo-Kader umfasst internationale und nationale Spitzenathleten. 
       Wir bieten Struktur, Begleitung und professionelle Unterrichtsstruktur.
     </p>
-    <!--
-      <p> = Paragraph / Absatz. Für normalen Fliesstext.
-    -->
-
   </section>
 
+  <!-- ============================================================
+       STATISTIKEN (NEU)
+       ============================================================ -->
+  <section class="statistiken">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-zahl">12+</span>
+        <span class="stat-label">Aktive Athleten</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-zahl">5</span>
+        <span class="stat-label">Nationen vertreten</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-zahl">30+</span>
+        <span class="stat-label">Medaillen gewonnen</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-zahl">8</span>
+        <span class="stat-label">Jahre Erfahrung</span>
+      </div>
+    </div>
+  </section>
 
   <!-- ============================================================
-       TEAM-SEKTION
+       TEAM
        ============================================================ -->
   <section class="team" id="team">
-    <!--
-      id="team" = eindeutiger Bezeichner für dieses Element.
-      IDs dürfen auf einer Seite NUR EINMAL vorkommen!
-      Wird hier als Sprungziel für den Anker-Link oben verwendet.
-    -->
-
     <h2>Ein Team.<br>Ohne Wenn und Aber.</h2>
-
     <p>
-      Das UHP Taekwondo-Team bietet angehenden Athleten für Informatiker 
-      und professionelle Athleten, die auf langfristige Leistungsentwicklung 
-      setzen, eine einzigartige Umgebung.
+      Das UHP Taekwondo-Team bietet angehenden Athleten und professionellen 
+      Athleten, die auf langfristige Leistungsentwicklung setzen, eine 
+      einzigartige Umgebung.
     </p>
-
     <h3>Das UHP Team entsteht</h3>
-    <!--
-      <h3> = Unterüberschrift (dritte Ebene)
-    -->
-
     <ul>
-      <!--
-        <ul> = ungeordnete Liste (Aufzählungspunkte, "Bullets")
-        Jeder Listenpunkt = <li> (list item)
-        Alternative: <ol> = geordnete Liste (nummeriert: 1, 2, 3...)
-      -->
       <li>Gezielte Förderung nationaler Athleten</li>
       <li>Professionelle Trainingsstruktur</li>
       <li>Selektion und Weiterentwicklung</li>
     </ul>
-
   </section>
-
 
   <!-- ============================================================
        VERANTWORTUNG / WERTE
        ============================================================ -->
   <section class="verantwortung">
-
     <h2>Leistung und Verantwortung.<br>Bewährte Struktur.</h2>
-
     <p>
       Das UHP Taekwondo-Kader orientiert sich an klaren Werten und übernimmt 
       Verantwortung für die Athleten. Wir arbeiten täglich am Erfolg.
     </p>
-
     <div class="grundsaetze">
-      <!--
-        <div> als Container für die drei Grundsätze.
-        Später im CSS können wir diese z.B. nebeneinander anordnen (Flexbox/Grid).
-      -->
-
       <div class="grundsatz">
         <h3>Grundsatz 1</h3>
         <p>Kurzbeschreibung des ersten Grundsatzes.</p>
       </div>
-
       <div class="grundsatz">
         <h3>Grundsatz 2</h3>
         <p>Kurzbeschreibung des zweiten Grundsatzes.</p>
       </div>
-
       <div class="grundsatz">
         <h3>Grundsatz 3</h3>
         <p>Kurzbeschreibung des dritten Grundsatzes.</p>
       </div>
-
     </div>
-
   </section>
 
+  <!-- ============================================================
+       TRAININGSABLAUF (NEU)
+       ============================================================ -->
+  <section class="training" id="training">
+    <h2>Unser Trainingsansatz.<br>Schritt für Schritt.</h2>
+    <p>
+      Jeder Athlet durchläuft ein strukturiertes Programm, das individuell 
+      angepasst wird. Von der ersten Selektion bis zum internationalen Wettkampf.
+    </p>
+    <div class="training-schritte">
+
+      <div class="training-schritt">
+        <div class="schritt-nummer">01</div>
+        <div class="schritt-inhalt">
+          <h3>Selektion & Aufnahme</h3>
+          <p>
+            Interessierte Athleten durchlaufen ein strukturiertes 
+            Aufnahmeverfahren. Dabei werden technische Fähigkeiten, 
+            Kondition und Wettkampferfahrung bewertet.
+          </p>
+        </div>
+      </div>
+
+      <div class="training-schritt">
+        <div class="schritt-nummer">02</div>
+        <div class="schritt-inhalt">
+          <h3>Individueller Entwicklungsplan</h3>
+          <p>
+            Für jeden Athleten wird ein massgeschneiderter Trainingsplan 
+            erstellt. Ziele, Zeitplan und Meilensteine werden gemeinsam 
+            definiert.
+          </p>
+        </div>
+      </div>
+
+      <div class="training-schritt">
+        <div class="schritt-nummer">03</div>
+        <div class="schritt-inhalt">
+          <h3>Wettkampfvorbereitung</h3>
+          <p>
+            Gezielte Vorbereitung auf nationale und internationale 
+            Wettkämpfe. Technisches Training, taktische Analyse und 
+            mentale Stärke werden gleichermassen gefördert.
+          </p>
+        </div>
+      </div>
+
+      <div class="training-schritt">
+        <div class="schritt-nummer">04</div>
+        <div class="schritt-inhalt">
+          <h3>Nachbesprechung & Weiterentwicklung</h3>
+          <p>
+            Nach jedem Wettkampf folgt eine detaillierte Analyse. 
+            Stärken werden ausgebaut, Schwächen gezielt angegangen – 
+            kontinuierliche Verbesserung ist unser Ziel.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ============================================================
-       ROTER CTA-BEREICH (Call to Action = Handlungsaufforderung)
+       ROTER CTA
        ============================================================ -->
   <section class="cta-rot">
-    <!--
-      CTA = Call to Action. Ein Bereich, der den Benutzer zu einer
-      Aktion auffordert, z.B. "Jetzt anmelden" oder "Mehr erfahren".
-      Dieser Bereich hat laut Design einen roten Hintergrund.
-    -->
-
     <h2>Sei der Unterschied.</h2>
-
     <p>Werde Teil des UHP Teams – gestalte die Zukunft des Taekwondo in der Schweiz.</p>
-
-    <a href="#kontakt" class="button-weiss">Mehr erfahren</a>
-
+    <a href="#anmeldung" class="button-weiss">Mehr erfahren</a>
     <div class="social-media">
       <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-        <!--
-          target="_blank" = öffnet den Link in einem neuen Browser-Tab
-          aria-label = Beschriftung für Screenreader (da kein sichtbarer Text)
-        -->
-        <img src="images/icon-instagram.svg" alt="Instagram">
+        <img src="img/instagram.svg" alt="Instagram">
       </a>
       <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-        <img src="images/icon-facebook.svg" alt="Facebook">
+        <img src="img/facebook.svg" alt="Facebook">
       </a>
     </div>
-
   </section>
 
-
   <!-- ============================================================
-       ATHLETEN-BEREICH
+       ATHLETEN
        ============================================================ -->
   <section class="athleten" id="athleten">
-
     <h2>Für Athlet:innen. Endlich ein fairer Rahmen.</h2>
-
     <p>Das UHP Team bietet mit dem Athleten System eine faire und individuelle Unterstützung.</p>
-
     <div class="athleten-vorteile">
-
       <div class="vorteil">
-        <h3>Titel</h3>
-        <p>Beschreibung des ersten Vorteils.</p>
+        <h3>Finanzielle Unterstützung</h3>
+        <p>
+          Wir helfen Athleten bei der Finanzierung von Wettkampfreisen, 
+          Ausrüstung und Trainingslagern. Kein Talent soll an Kosten scheitern.
+        </p>
+      </div>
+      <div class="vorteil">
+        <h3>Professionelles Coaching</h3>
+        <p>
+          Unsere zertifizierten Trainer begleiten die Athleten individuell – 
+          vom technischen Feinschliff bis zur mentalen Wettkampfvorbereitung.
+        </p>
+      </div>
+      <div class="vorteil">
+        <h3>Netzwerk & Kontakte</h3>
+        <p>
+          Durch unser Netzwerk in der Schweizer und internationalen 
+          Taekwondo-Szene öffnen sich Türen, die sonst verschlossen bleiben.
+        </p>
+      </div>
+      <div class="vorteil">
+        <h3>Dual-Karriere Support</h3>
+        <p>
+          Sport und Ausbildung oder Beruf lassen sich vereinbaren. 
+          Wir unterstützen Athleten bei der Planung ihrer Doppelkarriere.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ERFOLGE (NEU)
+       ============================================================ -->
+  <section class="erfolge" id="erfolge">
+    <h2>Unsere Erfolge.<br>Resultate, die sprechen.</h2>
+    <p>
+      Das UHP Team hat in den letzten Jahren zahlreiche Erfolge auf 
+      nationaler und internationaler Ebene erzielt.
+    </p>
+    <div class="erfolge-grid">
+
+      <div class="erfolg-karte">
+        <div class="erfolg-Jahr">2024</div>
+        <h3>Schweizer Meisterschaft</h3>
+        <p>3× Gold, 2× Silber, 1× Bronze in verschiedenen Gewichtsklassen</p>
+        <span class="erfolg-badge">Nationales Niveau</span>
       </div>
 
-      <div class="vorteil">
-        <h3>Titel</h3>
-        <p>Beschreibung des zweiten Vorteils.</p>
+      <div class="erfolg-karte">
+        <div class="erfolg-Jahr">2023</div>
+        <h3>European Open</h3>
+        <p>Zwei Athleten erreichten das Halbfinale beim European Open in Zürich</p>
+        <span class="erfolg-badge">Internationales Niveau</span>
+      </div>
+
+      <div class="erfolg-karte">
+        <div class="erfolg-Jahr">2023</div>
+        <h3>Swiss Open Poomsae</h3>
+        <p>Dominierende Leistung im Poomsae-Bereich mit 4 Podestplätzen</p>
+        <span class="erfolg-badge">Nationales Niveau</span>
+      </div>
+
+      <div class="erfolg-karte">
+        <div class="erfolg-Jahr">2022</div>
+        <h3>Nachwuchsförderpreis</h3>
+        <p>Auszeichnung des Schweizer Taekwondo-Verbandes für herausragende Nachwuchsarbeit</p>
+        <span class="erfolg-badge">Auszeichnung</span>
       </div>
 
     </div>
-
   </section>
-
 
   <!-- ============================================================
-       SCHWEIZ-BEREICH
+       SCHWEIZ
        ============================================================ -->
   <section class="schweiz">
-
     <h2>Für die Schweiz: Stärker durch geteilte Erfahrung.</h2>
-
     <p>Das UHP Team arbeitet mit allen grossen Schweizer Taekwondo-Verbänden zusammen.</p>
-
   </section>
-
 
   <!-- ============================================================
        PARTNER & TRÄGER
        ============================================================ -->
   <section class="partner" id="partner">
-
     <h2>Unsere Partner & Träger</h2>
-
     <div class="partner-logos">
-      <!--
-        Hier kommen die Partner-Logos als <img>-Elemente rein.
-        Jedes Logo wird mit einem Link verknüpft.
-      -->
       <a href="#" target="_blank">
         <img src="images/partner-1.png" alt="Swiss Taekwondo">
       </a>
@@ -306,49 +310,195 @@
         <img src="images/partner-3.png" alt="Swiss Taekwondo">
       </a>
     </div>
-
   </section>
 
+  <!-- ============================================================
+       ANMELDEFORMULAR (NEU)
+       ============================================================ -->
+  <section class="anmeldung" id="anmeldung">
+    <div class="anmeldung-inhalt">
+
+      <div class="anmeldung-text">
+        <h2>Bereit für den<br>nächsten Schritt?</h2>
+        <p>
+          Fülle das Formular aus und wir melden uns innerhalb von 
+          48 Stunden bei dir. Wir freuen uns auf deine Bewerbung.
+        </p>
+        <ul class="anmeldung-punkte">
+          <li>✓ Kostenlose Erstberatung</li>
+          <li>✓ Kein Risiko, keine Verpflichtung</li>
+          <li>✓ Antwort innerhalb von 48 Stunden</li>
+        </ul>
+      </div>
+
+      <div class="anmeldung-formular">
+        <form action="#" method="post">
+          <!--
+            <form> = Formular-Container.
+            action="#" = wohin die Daten gesendet werden (hier: Platzhalter)
+            method="post" = Übermittlungsart (post = Daten im Hintergrund senden)
+          -->
+
+          <div class="formular-gruppe">
+            <label for="vorname">Vorname *</label>
+            <!--
+              <label for="..."> verknüpft die Beschriftung mit dem Eingabefeld.
+              Der Wert von for= muss mit der id= des Inputs übereinstimmen.
+              Wichtig für Barrierefreiheit!
+            -->
+            <input type="text" id="vorname" name="vorname" placeholder="Max" required>
+            <!--
+              type="text" = Texteingabe
+              id= = eindeutiger Bezeichner (für label)
+              name= = Name des Feldes (wird beim Senden mitgeschickt)
+              placeholder= = grauer Hinweistext
+              required = Pflichtfeld (Browser-Validierung)
+            -->
+          </div>
+
+          <div class="formular-gruppe">
+            <label for="nachname">Nachname *</label>
+            <input type="text" id="nachname" name="nachname" placeholder="Mustermann" required>
+          </div>
+
+          <div class="formular-gruppe">
+            <label for="email">E-Mail-Adresse *</label>
+            <input type="email" id="email" name="email" placeholder="max@beispiel.ch" required>
+            <!--
+              type="email" = Browser prüft automatisch, ob es eine gültige E-Mail ist
+            -->
+          </div>
+
+          <div class="formular-gruppe">
+            <label for="alter">Alter</label>
+            <input type="number" id="alter" name="alter" placeholder="25" min="10" max="50">
+            <!--
+              type="number" = nur Zahlen erlaubt
+              min / max = erlaubter Wertebereich
+            -->
+          </div>
+
+          <div class="formular-gruppe">
+            <label for="disziplin">Disziplin</label>
+            <select id="disziplin" name="disziplin">
+              <!--
+                <select> = Dropdown-Menü
+                Jede Option ist ein <option>-Element.
+              -->
+              <option value="">Bitte wählen</option>
+              <option value="ko">K.O. (Kyorugi)</option>
+              <option value="poomsae">Poomsae</option>
+              <option value="beide">Beide</option>
+            </select>
+          </div>
+
+          <div class="formular-gruppe formular-gruppe--voll">
+            <label for="nachricht">Deine Nachricht</label>
+            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Erzähl uns etwas über dich, deine Erfahrung und deine Ziele..."></textarea>
+            <!--
+              <textarea> = mehrzeiliges Textfeld
+              rows="4" = Standardhöhe in Zeilen
+            -->
+          </div>
+
+          <div class="formular-gruppe formular-gruppe--voll">
+            <button type="submit" class="button-rot button-gross">
+              Bewerbung senden
+            </button>
+            <!--
+              type="submit" = sendet das Formular beim Klick
+            -->
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ============================================================
-       KONTAKT / FOOTER
+       FAQ (NEU)
+       ============================================================ -->
+  <section class="faq">
+    <h2>Häufige Fragen.</h2>
+    <div class="faq-liste">
+
+      <details class="faq-punkt">
+        <!--
+          <details> = ausklappbares Element (kein JavaScript nötig!)
+          <summary> = der sichtbare Titel, auf den man klickt
+          Alles nach <summary> ist der ausklappbare Inhalt.
+        -->
+        <summary>Wer kann dem UHP Team beitreten?</summary>
+        <p>
+          Das UHP Team steht Athleten aller Altersklassen offen, die ernsthaft 
+          Taekwondo betreiben und auf nationalem oder internationalem Niveau 
+          Wettkämpfe bestreiten möchten. Grundvoraussetzung ist ein aktueller 
+          Vereinsmitgliedschaft in der Schweiz.
+        </p>
+      </details>
+
+      <details class="faq-punkt">
+        <summary>Wie oft wird trainiert?</summary>
+        <p>
+          Das Trainingspensum hängt vom individuellen Entwicklungsplan ab. 
+          In der Regel trainieren unsere Athleten 4–6 Mal pro Woche. 
+          Zusätzlich finden monatliche Teamtrainings und mehrere 
+          Trainingslager pro Jahr statt.
+        </p>
+      </details>
+
+      <details class="faq-punkt">
+        <summary>Welche Kosten entstehen?</summary>
+        <p>
+          Die Mitgliedschaft im UHP Team ist mit einem Jahresbeitrag verbunden, 
+          der Trainingsbegleitung, Coaching und Materialien abdeckt. 
+          Reisekosten für Wettkämpfe werden teilweise übernommen. 
+          Genaue Informationen erhältst du nach deiner Bewerbung.
+        </p>
+      </details>
+
+      <details class="faq-punkt">
+        <summary>Kann ich Taekwondo und Schule / Beruf kombinieren?</summary>
+        <p>
+          Ja, absolut. Wir legen grossen Wert auf die Dual-Karriere unserer 
+          Athleten. Gemeinsam erstellen wir einen Trainingsplan, der sich 
+          optimal mit Schule, Studium oder Beruf vereinbaren lässt.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER / KONTAKT
        ============================================================ -->
   <footer id="kontakt">
-    <!--
-      <footer> = Fussbereich der Seite.
-      Enthält typischerweise Kontaktinfos, Links, Copyright.
-      id="kontakt" als Sprungziel für Anker-Links.
-    -->
-
     <div class="footer-inhalt">
 
       <div class="footer-logo">
-        <img src="images/logo.png" alt="UHP Taekwondo Logo">
+        <img src="img/Swiss Logo 2018 _UHP.svg" alt="UHP Taekwondo Logo">
+        <p class="footer-slogan">United High Performance Team</p>
       </div>
 
       <address>
-        <!--
-          <address> = Kontaktinformationen.
-          Semantisches HTML: Der Browser und Suchmaschinen "verstehen",
-          dass das eine Adresse/Kontaktinfo ist.
-        -->
-        <p>UHP Taekwondo</p>
+        <p><strong>UHP Taekwondo</strong></p>
         <p>Musterstrasse 1, 3000 Bern</p>
-        <p>
-          <a href="mailto:info@uhp-taekwondo.ch">info@uhp-taekwondo.ch</a>
-          <!--
-            mailto: = öffnet das E-Mail-Programm des Benutzers
-          -->
-        </p>
-        <p>
-          <a href="tel:+41000000000">+41 00 000 00 00</a>
-          <!--
-            tel: = ermöglicht direktes Anrufen auf Mobilgeräten
-          -->
-        </p>
+        <p><a href="mailto:info@uhp-taekwondo.ch">info@uhp-taekwondo.ch</a></p>
+        <p><a href="tel:+41000000000">+41 00 000 00 00</a></p>
       </address>
 
       <nav class="footer-nav">
+        <strong>Navigation</strong>
+        <a href="#team">Team</a>
+        <a href="#training">Training</a>
+        <a href="#athleten">Athleten</a>
+        <a href="#erfolge">Erfolge</a>
+        <a href="#partner">Partner</a>
+      </nav>
+
+      <nav class="footer-nav">
+        <strong>Rechtliches</strong>
         <a href="#">Impressum</a>
         <a href="#">Datenschutz</a>
         <a href="#">Kontakt</a>
@@ -358,15 +508,8 @@
 
     <p class="copyright">
       &copy; 2024 UHP Taekwondo – United High Performance Team
-      <!--
-        &copy; = HTML-Entität für das Copyright-Zeichen ©
-        HTML-Entitäten beginnen mit & und enden mit ;
-        Weitere Beispiele: &amp; (= &), &lt; (= <), &gt; (= >)
-      -->
     </p>
-
   </footer>
-
 
 </body>
 </html>
